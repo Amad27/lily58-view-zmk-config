@@ -33,10 +33,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_tap_time 250>,
+                <&macro_press>,
                 <&kp LCMD>,
                 <&macro_press>,
-                <&kp SPACE>;
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LEFT_COMMAND>;
 
             label = "MACSEARCH";
         };
@@ -45,10 +47,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_tap_time 250>,
+                <&macro_press>,
                 <&kp LCMD &kp LEFT_SHIFT>,
                 <&macro_press>,
-                <&kp SPACE>;
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LEFT_COMMAND &kp LEFT_SHIFT>;
 
             label = "ONEPASSSEARCH";
         };
