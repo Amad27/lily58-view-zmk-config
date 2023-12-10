@@ -16,6 +16,32 @@
             bindings = <&tog 3>;
             key-positions = <42 43>;
         };
+
+        mac-seach {
+            bindings = <&macSearch>;
+            key-positions = <53 54>;
+        };
+
+        onePassSearch {
+            bindings = <&onePassSearch>;
+            key-positions = <53 54 36>;
+        };
+    };
+
+    macros {
+        macSearch: macSearch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCMD &kp SPACE>;
+            label = "MACSEARCH";
+        };
+
+        onePassSearch: onePassSearch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCMD &kp SPACE &kp LEFT_SHIFT>;
+            label = "ONEPASSSEARCH";
+        };
     };
 
     keymap {
