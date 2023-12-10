@@ -32,14 +32,24 @@
         macSearch: macSearch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCMD &kp SPACE>;
+            bindings =
+                <&macro_tap_time 250>,
+                <&kp LCMD>,
+                <&macro_press>,
+                <&kp SPACE>;
+
             label = "MACSEARCH";
         };
 
         onePassSearch: onePassSearch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCMD &kp SPACE &kp LEFT_SHIFT>;
+            bindings =
+                <&macro_tap_time 250>,
+                <&kp LCMD &kp LEFT_SHIFT>,
+                <&macro_press>,
+                <&kp SPACE>;
+
             label = "ONEPASSSEARCH";
         };
     };
